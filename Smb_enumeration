@@ -1,0 +1,24 @@
+smbmap -H $ip
+smbmap -H $ip -u (username) -p (password)
+
+
+
+smbclient -L $ip
+smbclient //$ip/guest
+get filename (download a file from smb to our local system)
+
+
+nmap --script smb-enum-shares -p139,445 $ip
+
+
+
+using metasploit 
+
+
+use auxiliary/scanner/smb/smb_enumshares
+set rhosts $ip
+smbuser safwan
+smbuser pass 123
+exploit
+
+https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
